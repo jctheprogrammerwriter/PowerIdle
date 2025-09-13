@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 26)
 
 add_executable(PowerIdle main.cpp
         User.ixx
-        Limits.ixx
 )
 
 target_sources(${PROJECT_NAME}
@@ -13,4 +12,5 @@ target_sources(${PROJECT_NAME}
         FILE_SET CXX_MODULES FILES
         User.ixx
         Limits.ixx
+        Multipliers.ixx
 )
