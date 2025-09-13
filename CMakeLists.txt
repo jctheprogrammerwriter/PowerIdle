@@ -4,7 +4,9 @@ project(PowerIdle)
 set(CMAKE_CXX_STANDARD 26)
 
 add_executable(PowerIdle main.cpp
-        User.ixx)
+        User.ixx
+        Limits.ixx
+)
 
 target_sources(${PROJECT_NAME}
         PUBLIC

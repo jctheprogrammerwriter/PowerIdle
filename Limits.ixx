@@ -3,7 +3,7 @@
 //
 module;
 
-export module Limits;
+export module LimitsMod;
 
 export int get_level_limit(const int level_limit) {
     return level_limit;

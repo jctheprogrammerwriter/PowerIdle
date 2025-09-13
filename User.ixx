@@ -3,11 +3,13 @@
 //
 module;
 
+import LimitsMod;
 #include <string>
 #include <utility>
 export module UserMod;
 
 export class User {
+
 public:
     User() = default;
 
@@ -57,17 +59,12 @@ public:
     }
 
     bool add_level(const int new_level) {
-        if (new_level > LEVEL_LIMIT) return false;
+        if (new_level > get_level_limit()) return false;
         _level += new_level;
         return true;
     }
 
 private:
-    static constexpr int LEVEL_LIMIT = 100;
-    static constexpr int YEAR_LIMIT = 2029;
-    static constexpr int AGE_LIMIT = 100;
-    static constexpr int LEVEL_STEP = 10;
-
     std::string _name{};
     int _age{18};
     int _year{2025};
